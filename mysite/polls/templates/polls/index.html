@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The HTML5 Herald</title>
+</head>
+
+<body>
+  {%if latest_questions %}
+    <ul>
+      {%for question in latest_questions%}
+        <li><a href='/polls/{{question.id}}'><b>{{question.question_text}}</b></a></li>
+      {%endfor%}
+    </ul>
+  {%else%}
+    <p>You don't have any questions.</p>
+  {%endif%}
+</body>
+</html>
